@@ -1,0 +1,7 @@
+fastapi==0.110.0
+aiofiles==23.2.1
+python-multipart==0.0.9
+streamlit==1.31.1
+uvicorn==0.27.1
+wave==0.0.2
+sounddevice==0.4.6

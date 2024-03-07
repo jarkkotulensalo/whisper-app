@@ -8,14 +8,11 @@ To run the Streamlit app inside a Docker container, follow these steps:
 
 1. **Build the Docker image**:
 
-docker build -t whisper_streamlit_app .
-
-
-Replace `my_streamlit_app` with the desired name for your Docker image.
+```docker build -t whisper_streamlit_app .```
 
 2. **Run the Docker container**:
 
-docker run -p 8501:8501 whisper_streamlit_app
+```docker run -p 8501:8501 whisper_streamlit_app```
 
 
 This command maps port 8501 on your host machine to port 8501 inside the Docker container where Streamlit is running. Adjust the port numbers as needed if you're using a different port for Streamlit.

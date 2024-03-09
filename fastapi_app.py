@@ -10,7 +10,7 @@ from tempfile import NamedTemporaryFile
 torch.cuda.is_available()
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-model = whisper.load_model("medium", device=DEVICE)
+model = whisper.load_model("medium", device=DEVICE, download_root="./models")
 
 app = FastAPI()
 

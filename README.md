@@ -12,7 +12,7 @@ To run the Streamlit app inside a Docker container, follow these steps:
 
 2. **Run the Docker container**:
 
-```docker run -p 8501:8501 whisper_streamlit_app```
+```docker run --rm -p 8501:8501 whisper_streamlit_app```
 
 
 This command maps port 8501 on your host machine to port 8501 inside the Docker container where Streamlit is running. Adjust the port numbers as needed if you're using a different port for Streamlit.
@@ -30,4 +30,3 @@ Once the Docker container is running, you can access your Streamlit app by openi
 
 - Make sure that your Whisper API is running and accessible within the Docker container at the specified URL (`http://localhost:8000/whisper` in the provided example). Adjust the URL accordingly if your Whisper API is running on a different port or endpoint.
 - Adjust the Streamlit app code if necessary to match your Whisper API endpoint and any other configurations.
-

@@ -16,13 +16,20 @@ COPY requirements.txt .
 
 # Install Python dependencies
 RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
+RUN pip install uv
+RUN uv pip install --system -r requirements.txt
 
 # Install Whisper from GitHub
 RUN pip install git+https://github.com/openai/whisper.git
 
+# mount the models folder
+# VOLUME /app/models
+
+# Copy the models folder into the container if not mounted
+COPY models /app/models
+
 # Copy the entire project folder into the container at /app
-COPY . .
+COPY *.py /app
 
 # Expose the ports for Streamlit and Whisper API
 EXPOSE 8501 8000
